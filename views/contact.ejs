@@ -1,6 +1,6 @@
 <%- include("partials/header"); -%>
 
 <h1>Contacts Page</h1>
-<p><%= contactContent %></p>
+<p><%- contactContent.replace(/\n/g, '<br/>') %></p>
 
 <%- include("partials/footer"); -%>

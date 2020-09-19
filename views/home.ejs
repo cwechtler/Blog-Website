@@ -1,15 +1,15 @@
 <%- include("partials/header"); -%>
 
 <h1>Home Page</h1>
-<p><%= startContent %></p>
+<p><%- startContent.replace(/\n/g, '<br/>') %></p>
 
 <!--Lambda expression "post =>" is the same as using an anonymous "function(post)" -->
 <% postsContent.forEach(post => { %>
 <div>
     <h1><%= post.title %></h1>
     <p>
-        <%= post.blog.substring(0, 100) + "..." %>
-        <a href="/post/<%= post.title %>">Read More</a>
+        <%= post.content.substring(0, 100) + "..." %>
+        <a href="/post/<%= post._id%>">Read More</a>
     </p>
 </div>
 <% }) %>
